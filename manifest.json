@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Inspect Element on Hover",
+    "version": "1.0",
+    "description": "Inspect element when hovering over it",
+    "icons": {
+      "48": "icon.png"
+    },
+    "permissions": ["activeTab","scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
